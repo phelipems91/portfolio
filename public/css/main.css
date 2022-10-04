@@ -1,0 +1,125 @@
+body{
+    margin-left: 15%;
+    margin-right: 15%;
+    box-sizing: border-box;
+    background-color: #E3E2DF;
+    font-family: "Poppins", sans-serif;
+}
+.homeContainer{
+    background-color: #E3E2DF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5vh 10vh 40vh 40vh 5vh;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "banner banner"
+                         "mission links"
+                         "footer footer";
+}
+header{
+    height: 40px;
+    width: 100%;
+    grid-area: header;
+    text-align:right;
+}
+header img{
+    width: 45px;
+    height: 40px;
+    opacity: 0.5; 
+}
+header img:hover{
+    opacity: 1;
+    cursor: pointer;  
+}
+nav{
+    height: 80px;
+    width: 100%;
+    grid-area: nav;
+    text-align: center;
+    vertical-align:top;
+}
+nav img{
+    width: 90px;
+    height: 80px;
+    vertical-align:top;
+}
+nav a{
+    background-color: #9A1750;
+    vertical-align:top;
+    padding: 100px;
+}
+footer{
+    text-align: center;
+    grid-area: footer;
+}
+.banner{
+    height: 90%;
+    grid-area: banner;
+    text-align: center;
+}
+.banner img{
+    height: 90%;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 3rem;
+}
+.mission{
+    height: 100%;
+    grid-area: mission;
+    border-style: solid;
+    border-color:#9A1750;
+    width: 90%;
+    margin-left: 0; 
+    margin-right: auto;
+    color: #5D001E;
+    border-radius: 3rem;
+    padding-left: 20px;
+}
+.links{
+    height: 100%;
+    grid-area: links;
+    border-style: solid;
+    border-color:#9A1750;
+    width: 90%;
+    margin-left: auto; 
+    margin-right: 0;
+    color: #5D001E;
+    border-radius: 3rem;
+    padding-left: 20px;
+}
+.links ul{
+    list-style-type: none;
+}
+.links li{
+    margin:0 0 8px 0;  
+}
+.links img{
+    height: 8%;
+    width: 8%;
+}
+#buttons{
+    margin-top: 22px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #E3E2DF;
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
+}
+.b {
+    border-color: transparent;
+    background-color: #9A1750;
+    color: #E3E2DF;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+.b:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
