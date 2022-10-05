@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="aboutMeContainer">
+        <%- include('partials/header') %>
+        <%- include('partials/nav') %>
+
+        <div class="picture">
+            <img src="img/phelipe.jpg">
+            <figcaption>Phelipe Matias da Silva</figcaption>
+        </div>
+
+        <div class="aboutMe">
+            <p>Ever since the beginning of my career, I have been working to propose solutions and solve practical problems.</p>
+            <p>In my first experience, I usually dealt with supporting hardware and software. Because I was an IT intern, I started learning how to resolve technical issues and deliver excellent support.</p>
+            <p>In my second company, I was responsible for the entire IT infrastructure. My main tasks were to administer the servers and network, administer the firewall, and support the database and ERP system. Also, I dealt with end-users to understand their necessities and provide proper solutions. Furthermore, I focused on improving my skills by doing an MBA in computer networks and started to get certifications.</p>
+            <p>After all these experiences, I decided that I also had to learn more about software, so nowadays I'm in the 3rd semester of the Software Engineering Technician program at Centennial College.</p>
+
+            <a href="pdf/resume.pdf">Resume</a>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+</body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="projectsContainer">
+        <%- include('partials/header') %>
+        <%- include('partials/nav') %>
+
+        <div class="projectsBar">
+            <div class="project1">
+                <p id="p1">Bug smasher game</p>
+            </div>
+            <div class="project2">
+                <p>Simple photo gallery</p>
+            </div>
+            <div class="project3">
+                <p>Enhanced photo gallery</p>
+            </div>
+        </div>
+
+        <div class="projectDescription">
+            <p>A simple bug smasher game developed as an assignment for the COMP125 course at Centennial College. To implement it I used HTML, CSS, and JavaScript. The objective of the game is to score points when clicking on the bug, and the speed increases together with the score. Also, The player can reset the whole game or only the speed.</p>
+            <p><a href="https://github.com/phelipems91/Bug-Smasher-Game">Repository</a></p>
+        </div>
+
+        <div class="projectPicture">
+            <img src="img/bug_smasher.jpg">
+        </div>
+      
+        <%- include('partials/footer') %>
+    </div>
+</body>

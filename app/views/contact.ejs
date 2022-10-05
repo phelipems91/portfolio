@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="contactContainer">
+        <%- include('partials/header') %>
+        <%- include('partials/nav') %>
+
+        <div class="contactInfo">
+            <p><b>Contact Information</b></p>
+            <p>Phelipe Matias</p>
+            <p>647-613-6184</p>
+            <p>phelipems91@gmail.com</p>
+        </div>
+
+        <div class="contactForm">
+            <p><b>Send me a message:</b></p>
+            <form action="/" method="get">
+                <label for="fName">First Name: </label>
+                <input type="text" id="fName" name="fName" size="48">
+
+                <label for="lName">Last Name: </label>
+                <input type="text" id="lName" name="lName" size="48">
+
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" size="48">
+
+                <label for="cNumber">Contact Number: </label>
+                <input type="tel" id="cNumber" name="cNumber" size="48">
+
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="10" cols="44"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+</body>
