@@ -1,3 +1,5 @@
+//Phelipe Matias da Silva - ID 301233605 - 10/7/2022
+
 exports.render = function(req, res) {
     if (req.session.lastVisit) {
         console.log(req.session.lastVisit);
@@ -9,3 +11,4 @@ exports.render = function(req, res) {
     title: 'Homepage | Portfolio - Phelipe Matias'
     });
 };
+

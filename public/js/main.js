@@ -1,10 +1,15 @@
+//Phelipe Matias da Silva - ID 301233605 - 10/7/2022
+
+//Function to select a project on the projects page
 $(document).ready(function() {
+    //Retrieves the necessary divs
     const divProject1 = $(".project1");
     const divProject2 = $(".project2");
     const divProject3 = $(".project3");
     const projectDescription = $(".projectDescription p");
     const projectPicture = $(".projectPicture img");
 
+    //If the first project is clicked it displays the correspondent info
     $(".project1").click(function () {
         divProject1.css("opacity", 1);
         divProject2.css("opacity", 0.5);
@@ -15,6 +20,7 @@ $(document).ready(function() {
         projectPicture[0].src = "http://localhost:3000/img/bug_smasher.jpg";
     });
 
+    //If the second project is clicked it displays the correspondent info
     $(".project2").click(function () {
         divProject1.css("opacity", 0.5);
         divProject2.css("opacity", 1);
@@ -25,6 +31,7 @@ $(document).ready(function() {
         projectPicture[0].src = "http://localhost:3000/img/photo_gallery.jpg";
     });
 
+    //If the third project is clicked it displays the correspondent info
     $(".project3").click(function () {
         divProject1.css("opacity", 0.5);
         divProject2.css("opacity", 0.5);

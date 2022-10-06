@@ -1,3 +1,6 @@
+/*Phelipe Matias da Silva - ID 301233605 - 10/7/2022*/
+
+/*Body of all pages*/
 body{
     margin-left: 15%;
     margin-right: 15%;
@@ -5,6 +8,9 @@ body{
     background-color: #E3E2DF;
     font-family: "Poppins", sans-serif;
 }
+
+/*Grid containers*/
+/*Grid container of the home page*/
 .homeContainer{
     background-color: #E3E2DF;
     display: grid;
@@ -16,6 +22,7 @@ body{
                          "mission links"
                          "footer footer";
 }
+/*Grid container of the about me page*/
 .aboutMeContainer{
     background-color: #E3E2DF;
     display: grid;
@@ -26,6 +33,7 @@ body{
                          "picture aboutMe"
                          "footer footer";
 }
+/*Grid container of the projects page*/
 .projectsContainer{
     background-color: #E3E2DF;
     display: grid;
@@ -38,6 +46,7 @@ body{
                          "projectPicture projectPicture"
                          "footer footer";
 }
+/*Grid container of the services page*/
 .servicesContainer{
     background-color: #E3E2DF;
     display: grid;
@@ -48,6 +57,7 @@ body{
                          "service1 service2 service3"
                          "footer footer footer";
 }
+/*Grid container of the contact page*/
 .contactContainer{
     background-color: #E3E2DF;
     display: grid;
@@ -58,6 +68,11 @@ body{
                          "contactInfo contactForm"
                          "footer footer";
 }
+
+/*--------------------*/
+
+/*Partials style*/
+/*Header style(GitHub and LinkedIn icons)*/
 header{
     height: 40px;
     width: 100%;
@@ -73,6 +88,7 @@ header img:hover{
     opacity: 1;
     cursor: pointer;  
 }
+/*Navigation bar style(Pages buttons)*/
 nav{
     height: 80px;
     width: 100%;
@@ -90,10 +106,43 @@ nav a{
     vertical-align:top;
     padding: 100px;
 }
+/*Navigation buttons style*/
+#buttons{
+    margin-top: 22px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #E3E2DF;
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
+}
+.b {
+    border-color: transparent;
+    background-color: #9A1750;
+    color: #E3E2DF;
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+.b:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+/*Footer style(Copyright info)*/
 footer{
     text-align: center;
     grid-area: footer;
 }
+
+/*------------------------*/
+
+/*Home page style*/
+/*Banner of the home page style*/
 .banner{
     height: 90%;
     grid-area: banner;
@@ -104,7 +153,9 @@ footer{
     width: 100%;
     margin-top: 20px;
     border-radius: 3rem;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+/*Mission statement style*/
 .mission{
     height: 100%;
     grid-area: mission;
@@ -116,7 +167,9 @@ footer{
     color: #5D001E;
     border-radius: 3rem;
     padding-left: 20px;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+/*Links of the home page style*/
 .links{
     height: 100%;
     grid-area: links;
@@ -128,6 +181,7 @@ footer{
     color: #5D001E;
     border-radius: 3rem;
     padding-left: 20px;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .links ul{
     list-style-type: none;
@@ -139,23 +193,30 @@ footer{
     height: 8%;
     width: 8%;
 }
-.picture{
+
+/*-----------------------*/
+
+/*About me page style*/
+/*My picture style*/
+.aboutMePicture{
     margin-top: 40px;
     height: 80%;
     grid-area: picture;    
 }
-.picture img{
+.aboutMePicture img{
     margin: auto;
     top: 50;
     display: block;
     height: 60%;
     width: 70%;
-    border-radius: 100%
+    border-radius: 100%;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.picture figcaption{
+.aboutMePicture figcaption{
     color: #5D001E;
     text-align: center;
 }
+/*About me information style*/
 .aboutMe{
     margin-top: 40px;
     height: 80%;
@@ -165,6 +226,11 @@ footer{
     margin-top: 30px;
     color: #5D001E;
 }
+
+/*----------------------*/
+
+/*Projects page style*/
+/*Project selection bar style*/
 .projectsBar{
     grid-area: projectsBar;
     width: 100%;
@@ -197,6 +263,7 @@ footer{
 .project3{
     opacity: 0.5;
 }
+/*Style of the picture of the selected project*/
 .projectPicture{
     grid-area: projectPicture;
     width: 100%;
@@ -207,7 +274,9 @@ footer{
     display: block;
     width: 50%;
     height: 100%;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+/*Style of the description of the selected project*/
 .projectDescription{
     grid-area: projectDescription;
     width: 100%;
@@ -216,6 +285,11 @@ footer{
     text-align: center;
     color: #5D001E;
 }
+
+/*-----------------------*/
+
+/*Services page style*/
+/*Style of the three services container*/
 .servicesContainer div{
     height: 40%;
     width: 90%;
@@ -227,12 +301,15 @@ footer{
 }
 .service1{
     grid-area: service1;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service2{
     grid-area: service2;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service3{
     grid-area: service3;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service1 img, .service2 img, .service3 img{
     margin: auto;
@@ -246,6 +323,11 @@ footer{
     text-align: center;
     font-style: bold;
 }
+
+/*---------------------*/
+
+/*Contact page style*/
+/*Contact info panel style*/
 .contactContainer div{
     width: 90%;
     padding-left: 5%;
@@ -263,40 +345,17 @@ footer{
     margin-right: auto;
     height: 35%;
     margin-top: 10%;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+/*Contact form style*/
 .contactForm{
     grid-area: contactForm;
     margin-left: auto; 
     margin-right: 0;
     margin-top: 10%;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-#buttons{
-    margin-top: 22px;
-}
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    color: #E3E2DF;
-    backface-visibility: hidden;
-    border: 0.3rem solid transparent;
-    border-radius: 3rem;
-}
-.b {
-    border-color: transparent;
-    background-color: #9A1750;
-    color: #E3E2DF;
-    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
-}
-.bn37:hover {
-    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
-}
-
+/*Style of the fields of the form*/
 input[type=text], input[type=password], input[type=number], input[type=tel], select, textarea {
     padding: 1.5px 2.5px;
     margin: 2px 0;

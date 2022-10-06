@@ -1,3 +1,6 @@
+//Phelipe Matias da Silva - ID 301233605 - 10/7/2022
+
+//Dependencies
 var config = require('./env/development');
 var session = require('express-session');
 var express = require('express');
@@ -32,6 +35,7 @@ module.exports = function(){
 
     app.use(express.static('./public'));
 
+    //Routes for all pages
     require('../app/routes/index.server.routes')(app);
     require('../app/routes/aboutme.server.routes')(app);
     require('../app/routes/projects.server.routes')(app);

@@ -1,10 +1,6 @@
-exports.render = function(req, res) {
-    if (req.session.lastVisit) {
-        console.log(req.session.lastVisit);
-    }
-    
-    req.session.lastVisit = new Date();
+//Phelipe Matias da Silva - ID 301233605 - 10/7/2022
 
+exports.render = function(req, res) {
     res.render('aboutme', {
     title: 'About Me | Portfolio - Phelipe Matias'
     });
