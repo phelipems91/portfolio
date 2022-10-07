@@ -8,7 +8,7 @@ exports.render = function(req, res) {
     req.session.lastVisit = new Date();
 
     res.render('index', {
-    title: 'Homepage | Portfolio - Phelipe Matias'
+    title: 'Home | Portfolio - Phelipe Matias'
     });
 };
 
