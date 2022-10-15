@@ -1,0 +1,31 @@
+<!--Phelipe Matias da Silva - ID 301233605 - 10/14/2022-->
+
+<!--Login page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="loginContainer"><!--Grid container for all divs of the page-->
+        <!--Login form-->
+        <div class="loginForm">
+            <h1><%= title %></h1>
+            <form action="/" method="post">
+                <label for="username">Username </label>
+                <input type="text" name="fName" size="30" required>
+
+                <label for="password">Password </label>
+                <input type="password" name="password" size="30" required>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+</body>

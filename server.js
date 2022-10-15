@@ -2,7 +2,7 @@
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development' //Current environment
 
-//Requires express module
+//Requires express and mongoose
 var express = require('./config/express');
 var app = express();
 

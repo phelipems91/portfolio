@@ -68,18 +68,35 @@ body{
                          "contactInfo contactForm"
                          "footer footer";
 }
+.loginContainer{
+    background-color: #E3E2DF;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95vh 5vh;
+    grid-template-areas: "loginForm"
+                         "footer";
+}
 
 /*--------------------*/
 
 /*Partials style*/
 /*Header style(GitHub and LinkedIn icons)*/
 header{
-    height: 40px;
-    width: 100%;
     grid-area: header;
-    text-align:right;
+    height: 40px;
 }
-header img{
+.leftHeader{
+    float: left;
+}
+.rightHeader{
+    float: right;
+}
+.leftHeader img{
+    width: 80px;
+    height: 40px;
+    opacity: 0.5; 
+}
+.rightHeader img{
     width: 45px;
     height: 40px;
     opacity: 0.5; 
@@ -290,7 +307,7 @@ footer{
 
 /*Services page style*/
 /*Style of the three services container*/
-.servicesContainer div{
+.service1, .service2, .service3{
     height: 40%;
     width: 90%;
     margin: auto;
@@ -298,18 +315,16 @@ footer{
     border-style: solid;
     border-color:#9A1750;
     border-radius: 3rem;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service1{
     grid-area: service1;
-    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service2{
     grid-area: service2;
-    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service3{
     grid-area: service3;
-    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .service1 img, .service2 img, .service3 img{
     margin: auto;
@@ -328,7 +343,7 @@ footer{
 
 /*Contact page style*/
 /*Contact info panel style*/
-.contactContainer div{
+.contactInfo, .contactForm{
     width: 90%;
     padding-left: 5%;
     border: solid;
@@ -356,11 +371,46 @@ footer{
     box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 /*Style of the fields of the form*/
-input[type=text], input[type=password], input[type=number], input[type=tel], select, textarea {
+.contactForm input[type=text], .contactForm input[type=password], .contactForm input[type=number], .contactForm input[type=tel], .contactForm select,  .contactForm textarea {
     padding: 1.5px 2.5px;
     margin: 2px 0;
     display: block;
     border: 1px solid #5D001E;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+/*---------------------*/
+
+/*Login page style*/
+/*Login form style*/
+.loginForm{
+    grid-area: loginForm;
+    margin: auto;
+    display: block;
+    width: 50%;
+    height: 70%;
+    line-height: 2.5;
+    color: #5D001E;
+    text-align: center;
+}
+.loginForm form{
+    border: solid;
+    border-style: solid;
+    border-color:#9A1750;
+    border-radius: 3rem;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 70%;
+    height: 40%;
+    margin: auto;
+    text-align: center;
+}
+.loginForm input[type=text], .loginForm input[type=password]{
+    padding: 1.5px 2.5px;
+    margin: 2px 0;
+    border: 1px solid #5D001E;
+    border-radius: 4px;
+    box-sizing: border-box;  
+    display: block;
+    margin: auto;
 }
