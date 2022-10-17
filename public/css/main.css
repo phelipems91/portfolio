@@ -88,13 +88,18 @@ header{
 .leftHeader{
     float: left;
 }
-.rightHeader{
+.leftHeader p{
     float: right;
+    padding-left: 20px;
+    color: #5D001E;
 }
 .leftHeader img{
     width: 80px;
     height: 40px;
     opacity: 0.5; 
+}
+.rightHeader{
+    float: right;
 }
 .rightHeader img{
     width: 45px;

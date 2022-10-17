@@ -2,6 +2,7 @@
 
 exports.render = function(req, res) {
     res.render('aboutme', {
-    title: 'About Me | Portfolio - Phelipe Matias'
+    title: 'About Me | Portfolio - Phelipe Matias',
+    displayName: req.user ? req.user.username : ''
     });
 };

@@ -3,7 +3,11 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development' //Current environment
 
 //Requires express and mongoose
+var configMongoose = require('./config/mongoose');
 var express = require('./config/express');
+
+const db = configMongoose();
+
 var app = express();
 
 var HOST = 'localhost';

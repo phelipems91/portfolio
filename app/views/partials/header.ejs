@@ -3,8 +3,16 @@
 <!--Header for all pages-->
 <header>
     <div class="leftHeader">
-        <a class="loginButton" href="/login"><img src="img/login.png"></a>
+        
+        <% if(typeof displayName == 'string' && displayName) {%>
+        <a href="/logout"><img src="img/logout.png"></a>
+        <p><b>Welcome, <%= displayName %></b></p>
+        <% } else { %>
+        <a href="/login"><img src="img/login.png"></a>
+        <% } %>
     </div>
+
+    
 
     <div class="rightHeader">
         <a href="https://www.linkedin.com/in/phelipemsilva/"  target="__blank"><img src="img/linkedin.png"></a>
