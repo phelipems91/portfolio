@@ -3,5 +3,6 @@ var login = require('../controllers/login.server.controller');
 
 module.exports = function(app){
     app.get('/login', login.create, login.render);
+    app.get('/logout',login.processLogout);
     app.post('/login',login.processLogin);
 }

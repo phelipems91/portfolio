@@ -49,6 +49,10 @@ exports.processLogin = (req, res, next) => {
 }
 
 exports.processLogout = function(req, res, next){
-    req.logout();
-    res.redirect('/');
+    req.logout(function(err) {
+        if (err) { 
+          return next(err); 
+          }
+        res.redirect('/');
+    });
 }

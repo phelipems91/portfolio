@@ -1,0 +1,39 @@
+<!--Phelipe Matias da Silva - ID 301233605 - 10/17/2022-->
+
+<!--Update business contacts page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <div class="updateContactContainer"><!--Grid container for all divs of the page-->
+        <%- include('partials/header') %>
+        <!--Contacts table-->
+        <div class="updateArea">
+            <h1><%= title %></h1>
+
+            <h2>Welcome, <%= displayName %></h2>
+
+            <form class="updateContactForm" method="POST">
+                <label for="contactName">Contact name </label>
+                <input type="text" name="contactName" size="30" value="<%=contact.contactName%>" required>
+
+                <label for="contactNumber">Contact number </label>
+                <input type="text" name="contactNumber" size="30"  value="<%=contact.contactNumber%>" required>
+
+                <label for="email">Email </label>
+                <input type="text" name="email" size="50" value="<%=contact.email%>" required>
+                <br>
+                <button><a href="/businesscontacts">Cancel</a></button>
+                <button type="submit">Update</button>
+            </form>
+            
+        
+    </div>
+    <%- include('partials/footer') %>
+</body>

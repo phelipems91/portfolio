@@ -1,0 +1,44 @@
+<!--Phelipe Matias da Silva - ID 301233605 - 10/17/2022-->
+
+<!--Business contacts page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="bContactsContainer"><!--Grid container for all divs of the page-->
+        <%- include('partials/header') %>
+        <!--Contacts table-->
+        <div class="contactsArea">
+            <h1><%= title %></h1>
+
+            <h2>Welcome, <%= displayName %></h2>
+
+            <table class="contactsTable">
+                <tr>
+                    <th class="header">Name</th>
+                    <th class="header">Number</th>
+                    <th class="header">Email</th>
+                    <th class="header"></th>
+                    <th class="header"></th>
+                </tr>
+                <% for(let count = 0; count < Contacts.length; count++) { %>
+                    <tr>
+                        <td class="data"><%= Contacts[count].contactName %></td>
+                        <td class="data"><%= Contacts[count].contactNumber %></td>
+                        <td class="data"><%= Contacts[count].email %></td>
+                        <td class="data"><a href="updatecontact/<%= Contacts[count]._id %>">Update</a></td>
+                        <td class="data"><a href="/businesscontacts/delete/<%= Contacts[count]._id %>">Delete</a></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+</body>

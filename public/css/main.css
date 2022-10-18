@@ -68,12 +68,33 @@ body{
                          "contactInfo contactForm"
                          "footer footer";
 }
+/*Grid container of the login page*/
 .loginContainer{
     background-color: #E3E2DF;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 95vh 5vh;
     grid-template-areas: "loginForm"
+                         "footer";
+}
+/*Grid container of the business contacts page*/
+.bContactsContainer{
+    background-color: #E3E2DF;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-areas: "header"
+                         "contactsArea"
+                         "footer";
+}
+/*Grid container of the update business contacts page*/
+.updateContactContainer{
+    background-color: #E3E2DF;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-areas: "header"
+                         "updateArea"
                          "footer";
 }
 
@@ -388,7 +409,6 @@ footer{
 /*---------------------*/
 
 /*Login page style*/
-/*Login form style*/
 .loginForm{
     grid-area: loginForm;
     margin: auto;
@@ -399,6 +419,7 @@ footer{
     color: #5D001E;
     text-align: center;
 }
+/*Login form style*/
 .loginForm form{
     border: solid;
     border-style: solid;
@@ -418,4 +439,92 @@ footer{
     box-sizing: border-box;  
     display: block;
     margin: auto;
+}
+
+/*---------------------*/
+
+/*Business contacts page style*/
+.contactsArea{
+    grid-area: contactsArea;
+    color: #5D001E;
+    text-align: center;
+}
+/*Table style*/
+.contactsTable{
+    border-collapse:collapse;
+    border-color:#5D001E;
+    border-spacing:0;
+    border-style:solid;
+    border-width:1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contactsTable td{
+    background-color:#EBF5FF;
+    border-color:#5D001E;
+    border-style:solid;
+    border-width:0px;
+    color:#5D001E;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+.contactsTable th{
+    background-color:#409cff;
+    border-color:#5D001E;
+    border-style:solid;
+    border-width:0px;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+.contactsTable .header{
+    text-align:left;vertical-align:top
+}   
+.contactsTable tr:nth-child(odd) td{
+    background-color:#D2E4FC;text-align:left;vertical-align:top
+}
+
+/*---------------------*/
+
+/*Update business contacts page style*/
+.updateArea{
+    grid-area: updateArea;
+    color: #5D001E;
+    text-align: center;
+}
+/*Form style*/
+.updateContactForm{
+    border: solid;
+    border-style: solid;
+    border-color:#9A1750;
+    border-radius: 3rem;
+    box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 70%;
+    height: 45%;
+    margin: auto;
+    text-align: center;
+    line-height: 2em;
+}
+.updateContactForm input[type=text]{
+    padding: 1.5px 2.5px;
+    margin: 2px 0;
+    border: 1px solid #5D001E;
+    border-radius: 4px;
+    box-sizing: border-box;  
+    display: block;
+    margin: auto;
+}
+.updateArea button{
+    padding: 15px;
+}
+.updateArea a, .updateArea a:visited{
+    text-decoration: none;
+    color: black;
 }
