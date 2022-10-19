@@ -13,8 +13,8 @@ function requireAuth(req, res, next)
 }
 
 module.exports = function(app){
-    //GET route to populate the business contacts collection and render the page
-    app.get('/businesscontacts', requireAuth, businessContacts.create, businessContacts.render);
+    //GET route to render the business contacts page
+    app.get('/businesscontacts', requireAuth, businessContacts.render);
 
     //GET route to render the update contact page according to the id passed
     app.get('/updatecontact/:id', requireAuth, businessContacts.displayUpdatePage);

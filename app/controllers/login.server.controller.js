@@ -5,18 +5,6 @@ const passport = require('passport');
 
 const User = require('../models/user.server.model');
 
-//Register a user to login into the secure area
-exports.create = async (req, res, next) => {
-    let newUser = new User({
-        username: "phelipe",
-        email: "phelipems91@gmail.com"
-    });
-
-    User.register(newUser, "123456", (err) => {
-            next();
-    });
-}
-
 //Render login.ejs passing a variable for title if the user is not logged in, otherwise redirect to the home page
 exports.render = function(req, res) {
     if(!req.user){
