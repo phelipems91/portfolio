@@ -73,8 +73,10 @@ body{
     background-color: #E3E2DF;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 95vh 5vh;
-    grid-template-areas: "loginForm"
+    grid-template-rows: 5vh 10vh 80vh 5vh;
+    grid-template-areas: "header"
+                         "nav"
+                         "loginForm"
                          "footer";
 }
 /*Grid container of the business contacts page*/
@@ -82,8 +84,9 @@ body{
     background-color: #E3E2DF;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-rows: 5vh 10vh 80vh 5vh;
     grid-template-areas: "header"
+                         "nav"
                          "contactsArea"
                          "footer";
 }
@@ -92,8 +95,9 @@ body{
     background-color: #E3E2DF;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-rows: 5vh 10vh 80vh 5vh;
     grid-template-areas: "header"
+                         "nav"
                          "updateArea"
                          "footer";
 }
@@ -157,7 +161,7 @@ nav a{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.6rem;
     font-weight: 500;
     font-size: 18px;
     text-align: center;
@@ -414,7 +418,7 @@ footer{
     margin: auto;
     display: block;
     width: 50%;
-    height: 70%;
+    height: 80%;
     line-height: 2.5;
     color: #5D001E;
     text-align: center;
@@ -448,6 +452,10 @@ footer{
     grid-area: contactsArea;
     color: #5D001E;
     text-align: center;
+}
+.contactsArea a, .contactsArea a:visited{
+    text-decoration: none;
+    color: black;
 }
 /*Table style*/
 .contactsTable{
@@ -507,7 +515,7 @@ footer{
     border-radius: 3rem;
     box-shadow: #9A1750 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width: 70%;
-    height: 45%;
+    height: 55%;
     margin: auto;
     text-align: center;
     line-height: 2em;
@@ -520,9 +528,6 @@ footer{
     box-sizing: border-box;  
     display: block;
     margin: auto;
-}
-.updateArea button{
-    padding: 15px;
 }
 .updateArea a, .updateArea a:visited{
     text-decoration: none;

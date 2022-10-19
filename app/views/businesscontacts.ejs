@@ -13,11 +13,10 @@
 <body>
     <div class="bContactsContainer"><!--Grid container for all divs of the page-->
         <%- include('partials/header') %>
+        <%- include('partials/nav') %>
         <!--Contacts table-->
         <div class="contactsArea">
             <h1><%= title %></h1>
-
-            <h2>Welcome, <%= displayName %></h2>
 
             <table class="contactsTable">
                 <tr>
@@ -32,8 +31,8 @@
                         <td class="data"><%= Contacts[count].contactName %></td>
                         <td class="data"><%= Contacts[count].contactNumber %></td>
                         <td class="data"><%= Contacts[count].email %></td>
-                        <td class="data"><a href="updatecontact/<%= Contacts[count]._id %>">Update</a></td>
-                        <td class="data"><a href="/businesscontacts/delete/<%= Contacts[count]._id %>">Delete</a></td>
+                        <td class="data"><button><a href="updatecontact/<%= Contacts[count]._id %>">Update</a></button></td>
+                        <td class="data"><button><a href="/businesscontacts/delete/<%= Contacts[count]._id %>">Delete</a></button></td>
                     </tr>
                 <% } %>
             </table>

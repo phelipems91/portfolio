@@ -2,5 +2,7 @@
 
 module.exports = function(app){
     var contact = require('../controllers/contact.server.controller');
+
+    //GET route to render the contact page
     app.get('/contact', contact.render);
 }

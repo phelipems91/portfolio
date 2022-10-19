@@ -13,11 +13,10 @@
 <body>
     <div class="updateContactContainer"><!--Grid container for all divs of the page-->
         <%- include('partials/header') %>
+        <%- include('partials/nav') %>
         <!--Contacts table-->
         <div class="updateArea">
             <h1><%= title %></h1>
-
-            <h2>Welcome, <%= displayName %></h2>
 
             <form class="updateContactForm" method="POST">
                 <label for="contactName">Contact name </label>
@@ -30,6 +29,7 @@
                 <input type="text" name="email" size="50" value="<%=contact.email%>" required>
                 <br>
                 <button><a href="/businesscontacts">Cancel</a></button>
+                <button><a href="/businesscontacts/delete/<%= contact._id %>">Delete</a></button>
                 <button type="submit">Update</button>
             </form>
             

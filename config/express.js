@@ -51,9 +51,11 @@ module.exports = function(){
     passport.serializeUser(User.serializeUser());
     passport.deserializeUser(User.deserializeUser());
 
+    //Set where to find views and view engine to ejs
     app.set('views','./app/views');
     app.set('view engine','ejs');
 
+    //Set where express should find static files
     app.use(express.static('./public'));
 
     //Routes for all pages

@@ -1,9 +1,11 @@
 //Phelipe Matias da Silva - ID 301233605 - 10/14/2022
+
 const mongoose = require('../../config/mongoose');
 const passport = require('passport');
 
 const User = require('../models/user.server.model');
 
+//Register a user to login into the secure area
 exports.create = async (req, res, next) => {
     let newUser = new User({
         username: "phelipe",
@@ -15,13 +17,12 @@ exports.create = async (req, res, next) => {
     });
 }
 
+//Render login.ejs passing a variable for title if the user is not logged in, otherwise redirect to the home page
 exports.render = function(req, res) {
-    //check if the user is already logged in
     if(!req.user){
         res.render('login', {
             title: 'Login | Secure area',
-            messages: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            messages: req.flash('loginMessage')
         });
     }else{
         return res.redirect('/');
@@ -29,6 +30,7 @@ exports.render = function(req, res) {
     
 };
 
+//If the credentials entered are correct redirect to businesscontacts.ejs, if they are not it shows an error
 exports.processLogin = (req, res, next) => {
     passport.authenticate('local',(err, user, info) => {
         console.log(info);
@@ -48,6 +50,7 @@ exports.processLogin = (req, res, next) => {
     })(req, res, next);
 }
 
+//Process the logout of the user
 exports.processLogout = function(req, res, next){
     req.logout(function(err) {
         if (err) { 

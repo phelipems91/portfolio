@@ -2,5 +2,7 @@
 
 module.exports = function(app){
     var services = require('../controllers/services.server.controller');
+
+    //GET route to render the services page
     app.get('/services', services.render);
 }

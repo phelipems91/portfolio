@@ -2,8 +2,8 @@
 
 <!--Header for all pages-->
 <header>
+    <!--Login/Logout buttons-->
     <div class="leftHeader">
-        
         <% if(typeof displayName == 'string' && displayName) {%>
         <a href="/logout"><img src="/img/logout.png"></a>
         <p><b>Welcome, <%= displayName %></b></p>
@@ -12,8 +12,7 @@
         <% } %>
     </div>
 
-    
-
+    <!--LinkedIn/Github buttons-->
     <div class="rightHeader">
         <a href="https://www.linkedin.com/in/phelipemsilva/"  target="__blank"><img src="/img/linkedin.png"></a>
         <a href="https://github.com/phelipems91"  target="__blank"><img src="/img/github.png"></a>

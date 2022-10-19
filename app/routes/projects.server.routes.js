@@ -2,5 +2,7 @@
 
 module.exports = function(app){
     var projects = require('../controllers/projects.server.controller');
+
+    //GET route to render the projects page
     app.get('/projects', projects.render);
 }

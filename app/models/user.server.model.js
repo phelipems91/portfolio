@@ -1,7 +1,10 @@
+//Phelipe Matias da Silva - ID 301233605 - 10/19/2022
+
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = mongoose.Schema;
 
+//Create a model for user
 const UserSchema = new Schema
 (
     {

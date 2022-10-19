@@ -2,6 +2,8 @@
 
 module.exports = function(app){
     var index = require('../controllers/index.server.controller');
+
+    //GET route to render the index page
     app.get('/', index.render);
 
     //Receives the data of the contact form, displays it in the console, and redirects to the home page
