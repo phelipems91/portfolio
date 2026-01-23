@@ -1,0 +1,7 @@
+.card span i {
+  transition: transform 0.2s ease;
+}
+
+.card span:hover i {
+  transform: scale(1.15);
+}
