@@ -14,5 +14,32 @@ import { Education } from "../sections/education/education";
   imports: [Introduction, About, Projects, Skills, Experience, Education],
 })
 export class Home {
+  isDark = false;
 
+  constructor() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      this.enableDark();
+    } else {
+      this.enableLight();
+    }
+  }
+
+  toggleTheme(): void {
+    this.isDark ? this.enableLight() : this.enableDark();
+  }
+
+  enableDark(): void {
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    this.isDark = true;
+  }
+
+  enableLight(): void {
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
+    localStorage.setItem('theme', 'light');
+    this.isDark = false;
+  }
 }

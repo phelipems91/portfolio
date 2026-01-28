@@ -12,16 +12,18 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/phelipemsilva/">LinkedIn</a>
+                        <a class="nav-link" href="https://www.linkedin.com/in/phelipemsilva/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="https://1drv.ms/b/c/5f6257e41e1ff74d/IQAy6thaVIXPTZWYGrTkyCfdASUl35XwR_FiFShKHdvfAzM?e=9DKeum" target="_blank" rel="noopener noreferrer">Resume</a>
                     </li>
                 </ul>
+                <button class="btn btn-outline-secondary ms-3" (click)="toggleTheme()" aria-label="Toggle dark mode">
+                    <i class="fa-solid" [class.fa-moon]="!isDark" [class.fa-sun]="isDark"></i>
+                </button>
             </div>
         </div>
     </nav>
-    <p>Sections</p>
     <div class="d-flex align-items-start">
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active" id="v-pills-introduction-tab" data-bs-toggle="pill"
